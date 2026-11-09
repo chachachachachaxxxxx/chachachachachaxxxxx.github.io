@@ -1,0 +1,24 @@
+/* Keep the original Jon Barron stylesheet and layout; only adapt content sizing and mobile flow. */
+h1.name { font-weight: normal; }
+body { background: #fff; color: #000; }
+p { line-height: 1.45; }
+.intro-photo img { height: auto; aspect-ratio: 1; }
+.work-image { width: 192px !important; }
+.work-copy { width: auto !important; }
+.footer, .footer a { font-size: 12px; }
+a:focus-visible { outline: 2px solid #1772d0; outline-offset: 3px; }
+@media (max-width: 600px) {
+  .intro-table > tbody > tr { display: flex; flex-direction: column-reverse; }
+  .intro-copy, .intro-photo { display: block; width: auto !important; max-width: none !important; }
+  .intro-photo { align-self: center; width: 150px !important; padding-top: 24px !important; }
+  .intro-copy { padding: 8px 16px !important; }
+  .name { padding-top: 5px; }
+  .work-table > tbody > tr { display: block; margin-bottom: 12px; }
+  .work-table > tbody > tr > td { display: block; width: auto !important; padding: 8px 16px !important; }
+  .work-image img { max-width: 100%; }
+}
+@media print {
+  .intro-photo { width: 20% !important; }
+  .footer { display: none; }
+  tr { break-inside: avoid; }
+}
